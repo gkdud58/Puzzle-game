@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp",
+              "RelativeDocumentMoniker": "Puzzle game\\main.cpp",
+              "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp",
+              "RelativeToolTip": "Puzzle game\\main.cpp",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-07-10T12:17:52.508Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
