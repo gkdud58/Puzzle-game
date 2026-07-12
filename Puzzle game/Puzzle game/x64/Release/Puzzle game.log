@@ -1,7 +1,15 @@
 ﻿  main.cpp
-C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+  player.cpp
+C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\player.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'player.cpp'을(를) 컴파일하는 중)
+  
   코드를 생성하고 있습니다.
-  Previous IPDB not found, fall back to full compilation.
-  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  4 of 4 functions (100.0%) were compiled.
+    3 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
-  Puzzle game.vcxproj -> C:\puzzle game\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe
+  Puzzle game.vcxproj -> C:\puzzle\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe
