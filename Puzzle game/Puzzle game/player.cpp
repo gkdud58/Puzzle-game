@@ -9,6 +9,8 @@ Player::Player()
 	width = 50.0f;
 	height = 50.0f;
 
+	velocityY = 0;
+
 	isGrounded = false;
 
 }
@@ -29,7 +31,7 @@ void Player::Update(float deltaTime)
 	position.y += velocityY * deltaTime;
 
 	// 바닥 충돌
-	float groundY = 600.0f;
+	float groundY = GetMonitorHeight(0) - 200;
 
 	// 바닥에 닿았을 때
 	if (position.y + height >= groundY) {
@@ -57,6 +59,14 @@ void Player::Update(float deltaTime)
 	if (position.x + width > GetScreenWidth()) {
 		position.x = GetScreenWidth() - width;
 	}
+}
+
+float Player::GetX() {
+	return position.x;
+}
+
+float Player::GetY() {
+	return position.y;
 }
 
 void Player::Render()

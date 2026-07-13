@@ -28,6 +28,9 @@ public:
 
 	// 키 입력 & 이동 처리
 	void Update(float deltaTime);
+	
+	float GetX();
+	float GetY();
 
 	// 출력
 	void Render();
