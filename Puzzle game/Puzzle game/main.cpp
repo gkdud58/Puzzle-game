@@ -3,6 +3,7 @@
 #include "Player_Camera.h"
 #include "Puzzle.h"
 
+// 어쩌구저쩌구
 int main(void)
 {
  
@@ -29,7 +30,7 @@ int main(void)
     // 임시 장애물 ;;
     const int obstacleCount = 3;
     // 초록색 임시 장애물
-    const float groundY = screenHeight - 200; 
+    const float groundY = WorldY - 600; 
 
 
 
@@ -89,11 +90,11 @@ int main(void)
         // 카메라 상관없이 고정인 것들 + 장애물이랑 퍼즐들 여기 아래에 추가 하면 됨
 
         // 바닥
-        DrawRectangle(0, groundY, screenWidth, screenHeight - groundY, DARKGREEN);
+        DrawRectangle(0, groundY, screenWidth, 200, DARKGREEN);
 
         // 7.14 하영
         // 바닥 (월드 좌표 기준, 화면 크기와 무관하게 고정)
-        DrawRectangle(0, WorldY, WorldX, 300, DARKGREEN);
+        DrawRectangle(0, WorldY, WorldX, 300, RED);
 
         // 장애물들
         for (int i = 0; i < obstacleCount; i++)

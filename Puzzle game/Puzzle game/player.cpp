@@ -31,8 +31,9 @@ void Player::Update(float deltaTime)
 	position.y += velocityY * deltaTime;
 
 	// 바닥 충돌
-	float groundY = GetMonitorHeight(0) - 200;
-
+	float groundY = 800; // >> 월드 좌표 기준 바닥으로 놓고싶어서
+	// 수정 전 //  float groundY = GetMonitorHeight(0) - 200;
+	
 	// 바닥에 닿았을 때
 	if (position.y + height >= groundY) {
 		
