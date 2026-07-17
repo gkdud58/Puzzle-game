@@ -1,1 +1,27 @@
-﻿  Puzzle game.vcxproj -> C:\퍼즐게임\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe
+﻿  Player_Camera.cpp
+  main.cpp
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\Player_Camera.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(14,29): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(14,29): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(15,30): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(15,30): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,32): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,19): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(93,35): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(93,26): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(97,34): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(97,26): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  player.cpp
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\player.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'player.cpp'을(를) 컴파일하는 중)
+  
+  Puzzle.cpp
+  코드를 생성하고 있습니다.
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  Puzzle game.vcxproj -> C:\puzzle game\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe
