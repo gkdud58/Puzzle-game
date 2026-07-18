@@ -21,14 +21,16 @@ int main(void)
    
     // 임시 장애물 위치
     const PUZZLE puzzles[] = {
-    { 800,  700, 100, 100 },
-    { 1500, 700, 100, 100 },
-    { 2600, 650, 150, 150 },
+        { 50.0f, WorldY * 0.5,  WorldX, 30.0f, DARKGREEN },
+        { 0.0f, WorldY * 0.8,  WorldX, 30.0f, DARKGREEN },
+        { 800.0, WorldY * 0.8 -100, 100.0, 100.0,GRAY  },
+        { 1500.0, WorldY * 0.8 - 100, 100.0, 100.0, GRAY },
+        { 2600.0, WorldY * 0.8 - 150, 150.0, 150.0 ,GRAY},
     };
 
     
     // 임시 장애물 ;;
-    const int obstacleCount = 3;
+    const int puzzleCount = 5;
     // 초록색 임시 장애물
     const float groundY = WorldY - 600; 
 
@@ -55,8 +57,7 @@ int main(void)
     {
         float deltaTime = GetFrameTime();
 
-        player.Update(deltaTime);
-
+        player.Update(deltaTime, puzzles, puzzleCount);
 
 
 
@@ -89,22 +90,17 @@ int main(void)
 
         // 카메라 상관없이 고정인 것들 + 장애물이랑 퍼즐들 여기 아래에 추가 하면 됨
 
-        // 바닥
-        DrawRectangle(0, groundY, screenWidth, 200, DARKGREEN);
-
-        // 7.14 하영
-        // 바닥 (월드 좌표 기준, 화면 크기와 무관하게 고정)
-        DrawRectangle(0, WorldY, WorldX, 300, RED);
 
         // 장애물들
-        for (int i = 0; i < obstacleCount; i++)
+        for (int i = 0; i < puzzleCount; i++)
         {
             DrawRectangle(
                 (int)puzzles[i].x,
                 (int)puzzles[i].y,
                 (int)puzzles[i].width,
                 (int)puzzles[i].height,
-                GRAY
+
+                puzzles[i].color // 장애물 색깔
             );
         }
 

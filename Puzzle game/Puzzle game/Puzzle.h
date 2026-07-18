@@ -1,4 +1,5 @@
 #pragma once
+#include "raylib.h"
 
 struct PUZZLE
 {
@@ -6,6 +7,7 @@ struct PUZZLE
     float y;
     float width;
     float height;
+    Color color;
 };
 
 class Puzzle

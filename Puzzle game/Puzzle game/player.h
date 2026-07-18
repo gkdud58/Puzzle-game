@@ -1,6 +1,7 @@
 #pragma once
 
 #include "raylib.h"
+#include "Puzzle.h"
 
 class Player
 {
@@ -27,7 +28,7 @@ public:
 	Player();
 
 	// 키 입력 & 이동 처리
-	void Update(float deltaTime);
+	void Update(float deltaTime, const PUZZLE puzzles[], int puzzleCount);
 	
 	float GetX();
 	float GetY();

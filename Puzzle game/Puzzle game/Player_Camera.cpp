@@ -9,8 +9,6 @@ Player_Camera::Player_Camera()
     camera.rotation = 0.0f;
     camera.zoom;
 }
-
-
 void Player_Camera::Update(float screenWidth, float screenHeight, float playerX, float playerY)
 {
     camera.target = { playerX + 20, playerY + 20};
@@ -23,8 +21,8 @@ void Player_Camera::Update(float screenWidth, float screenHeight, float playerX,
 
 
     // 최대확대
-    if (camera.zoom > 3.0f) {
-        camera.zoom = 3.0f;
+    if (camera.zoom > 2.3f) {
+        camera.zoom = 2.3f;
     }
 
     // 최소축소
@@ -33,12 +31,12 @@ void Player_Camera::Update(float screenWidth, float screenHeight, float playerX,
     }
 
     // 카메라 제한 -> 월드좌표 바깥으로 카메라 안넘어가게끔 >> 하고싶었는데 수정필요함~
-    if (camera.target.y + screenHeight/2 >= 800.0f)
-        camera.target.y = 900.0f - screenHeight/2; 
-    if (camera.target.x >= 3000.0f)
-        camera.target.x = 3000.0f;
-    if (camera.target.x <= 0.0f)
-        camera.target.x = 0.0f;
+    if (camera.target.y + screenHeight/camera.zoom/2 >= 800.0f)
+        camera.target.y = 800.0f - screenHeight/ camera.zoom / 2;
+    if (camera.target.x + screenWidth / camera.zoom / 2  >= 3000.0f)
+        camera.target.x = 3000.0f - screenWidth / camera.zoom / 2;
+    if (camera.target.x - screenWidth / camera.zoom / 2 <= 0.0f)
+        camera.target.x = screenWidth / camera.zoom / 2;
 }
 
 

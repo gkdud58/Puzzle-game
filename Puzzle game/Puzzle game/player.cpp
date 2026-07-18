@@ -1,4 +1,5 @@
 #include "player.h"
+#include "math.h"
 
 Player::Player()
 {
@@ -15,35 +16,93 @@ Player::Player()
 
 }
 
-void Player::Update(float deltaTime) 
+void Player::Update(float deltaTime, const PUZZLE puzzles[], int puzzleCount)
 {
+	float next_X = position.x; // 수평 충돌 확인을 위한 변수
 
 	// 양 옆 이동
 	if (IsKeyDown(KEY_D)) {
-		position.x += speed * deltaTime;
+		next_X += speed * deltaTime;
 	}
 
 	if (IsKeyDown(KEY_A)) {
-		position.x -= speed * deltaTime;
+		next_X -= speed * deltaTime;
 	}
 
-	velocityY += 1000.0f * deltaTime;
-	position.y += velocityY * deltaTime;
+	Rectangle NearObs = { next_X, position.y, width, height }; // 근처 장애물
 
-	// 바닥 충돌
-	float groundY = 800; // >> 월드 좌표 기준 바닥으로 놓고싶어서
-	// 수정 전 //  float groundY = GetMonitorHeight(0) - 200;
-	
-	// 바닥에 닿았을 때
-	if (position.y + height >= groundY) {
-		
-		position.y = groundY - height;
-		velocityY = 0.0f;
+
+	bool block_X = false;
+	for (int i = 0; i < puzzleCount; ++i) {
+		Rectangle RectObs = { puzzles[i].x, puzzles[i].y, puzzles[i].width, puzzles[i].height };
+		if (CheckCollisionRecs(NearObs, RectObs)) {
+			block_X = true;
+
+			break;
+		}
+	}
+
+	if (!block_X) {
+		position.x = next_X;
+	}
+
+
+
+
+
+	// 중력
+	velocityY += 1000.0f * deltaTime;
+	float next_Y = position.y + velocityY * deltaTime;
+
+	// ---- 천장 체크 (위로 이동 중일 때만) ----
+	if (velocityY < 0) {
+		for (int i = 0; i < puzzleCount; ++i) {
+			(position.x < puzzles[i].x + puzzles[i].width)
+				&& (position.x + width > puzzles[i].x);
+
+			float ceiling_Y = puzzles[i].y + puzzles[i].height;
+
+			if ((position.x < puzzles[i].x + puzzles[i].width) && (position.x + width > puzzles[i].x)
+				&& (position.y >= ceiling_Y)
+				&& (next_Y <= ceiling_Y))
+			{
+				next_Y = ceiling_Y;   // 천장 바로 아래에서 딱 멈춤
+				velocityY = 0.0f; // 속도 즉시 0 (쿵!)
+				break;
+			}
+		}
+	}
+
+
+	// 바닥 체크
+	bool find_ground = false;
+	float groundY = 0.0;
+
+	for (int i = 0; i < puzzleCount; ++i) {
+
+
+		if ((position.x < puzzles[i].x + puzzles[i].width) && (position.x + width > puzzles[i].x) // 장애물 가로 끝에 닿인다면
+			&& (position.y + height <= puzzles[i].y) // 장애물이 위에 있다면
+			&& (next_Y + height >= puzzles[i].y))  // 장애물이 아래에 있다면
+		{
+			find_ground = true;
+			groundY = puzzles[i].y - height;
+			break;
+		}
+	}
+	if (find_ground) {
+		position.y = groundY;
+		velocityY = 0;
 		isGrounded = true;
 	}
 	else {
+		position.y = next_Y;
 		isGrounded = false;
 	}
+
+
+
+
 
 
 	// 점프
@@ -52,16 +111,8 @@ void Player::Update(float deltaTime)
 		isGrounded = false;
 	}
 
-	// 화면 밖으로 안나가게
-	if (position.x < 0) {
-		position.x = 0;
-	}
-
-	if (position.x + width > GetScreenWidth()) {
-		position.x = GetScreenWidth() - width;
-	}
+	
 }
-
 float Player::GetX() {
 	return position.x;
 }

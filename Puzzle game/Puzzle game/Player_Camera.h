@@ -8,7 +8,6 @@ private:
 
 public:
 	Player_Camera();
-
 	void Update(float screenWidth, float screenHeight, float playerX, float playerY);
 
 	Camera2D GetCamera() const;
