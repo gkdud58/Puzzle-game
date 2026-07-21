@@ -33,10 +33,10 @@ void Player_Camera::Update(float screenWidth, float screenHeight, float playerX,
     // 카메라 제한 -> 월드좌표 바깥으로 카메라 안넘어가게끔 >> 하고싶었는데 수정필요함~
     if (camera.target.y + screenHeight/camera.zoom/2 >= 800.0f)
         camera.target.y = 800.0f - screenHeight/ camera.zoom / 2;
-    if (camera.target.x + screenWidth / camera.zoom / 2  >= 3000.0f)
-        camera.target.x = 3000.0f - screenWidth / camera.zoom / 2;
-    if (camera.target.x - screenWidth / camera.zoom / 2 <= 0.0f)
-        camera.target.x = screenWidth / camera.zoom / 2;
+    //if (camera.target.x + screenWidth / camera.zoom / 2  >= 3000.0f)
+    //    camera.target.x = 3000.0f - screenWidth / camera.zoom / 2;
+    //if (camera.target.x - screenWidth / camera.zoom / 2 <= 0.0f)
+    //    camera.target.x = screenWidth / camera.zoom / 2;
 }
 
 

@@ -3,9 +3,22 @@
 #include "Player_Camera.h"
 #include "Puzzle.h"
 
+//========0722=========
+//struct Map1
+//{
+//    float MapX, MapY;
+//    float MapWidth, MapHeight;
+//    Color MapColor;
+//};
+//=======================
+
 // 어쩌구저쩌구
 int main(void)
 {
+    // 헤더파일 구조체? 가져오기
+    Player player;
+    Player_Camera camera;
+
  
     // 대충 화면
     InitWindow(800, 450, "Carry The Light"); 
@@ -21,16 +34,26 @@ int main(void)
    
     // 임시 장애물 위치
     const PUZZLE puzzles[] = {
-        { 50.0f, WorldY * 0.5,  WorldX, 30.0f, DARKGREEN },
-        { 0.0f, WorldY * 0.8,  WorldX, 30.0f, DARKGREEN },
-        { 800.0, WorldY * 0.8 -100, 100.0, 100.0,GRAY  },
+        //==========0722=============
+       {0, WorldY - 50, WorldX, 50.0f, BLACK}, // 바닥1
+        {0, WorldY - screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥2
+        {0, WorldY - 2 * screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥3
+        {WorldX - 50, WorldY - screenHeight / 3, 250.0f, screenHeight / 3 + 10 , BLACK}, // 바닥1 오른쪽 벽
+        {WorldX - 350, WorldY - 50 - player.width * 2/3,  300.0f, player.width * 2/3 + 10, BLACK}, // 바닥1 오른쪽 단차(?)
+        {WorldX/2, WorldY - player.width * 4, 200.0f, player.width * 4 + 10 , BLACK},
+        {WorldX/2 - 100, WorldY - player.width * 3, 400.0f, player.width * 3 + 10 , BLACK},
+        {WorldX/2 - 200, WorldY - player.width * 2, 600.0f, player.width * 2 + 10 , BLACK},
+        //===========================
+
+
+        { 800.0, WorldY * 0.8 -100, 100.0, 100.0,GRAY },
         { 1500.0, WorldY * 0.8 - 100, 100.0, 100.0, GRAY },
         { 2600.0, WorldY * 0.8 - 150, 150.0, 150.0 ,GRAY},
     };
 
-    
+  
     // 임시 장애물 ;;
-    const int puzzleCount = 5;
+    const int puzzleCount = 8;
     // 초록색 임시 장애물
     const float groundY = WorldY - 600; 
 
@@ -43,13 +66,6 @@ int main(void)
 
     // 타이머 설정
     SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 우리 게임에서 움직이는 것들이 빨리 움직임
-
-
-
-
-    // 헤더파일 구조체? 가져오기
-    Player player;
-    Player_Camera camera;
 
 
     // Render, Update, Draw 여기서 함
@@ -106,8 +122,7 @@ int main(void)
 
         player.Render();
         
-        
-        
+       
 
         // 초기화
         EndMode2D();

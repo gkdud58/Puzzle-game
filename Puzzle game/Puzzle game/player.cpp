@@ -3,7 +3,7 @@
 
 Player::Player()
 {
-	position = { 100.0f, 300.0f };
+	position = { 100.0f, 600.0f };
 
 	speed = 250.0f;
 

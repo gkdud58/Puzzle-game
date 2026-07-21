@@ -13,10 +13,7 @@ private:
 	// 속도
 	float speed;
 	
-	// 크기
-	float width;
-	float height;
-
+	
 	bool isGrounded;
 
 
@@ -26,6 +23,11 @@ private:
 public:
 
 	Player();
+
+	// 크기 // private -> public 이동 (main.cpp에서 사용하려고)
+	float width;
+	float height;
+
 
 	// 키 입력 & 이동 처리
 	void Update(float deltaTime, const PUZZLE puzzles[], int puzzleCount);
