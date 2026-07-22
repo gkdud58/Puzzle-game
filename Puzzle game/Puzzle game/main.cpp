@@ -40,8 +40,8 @@ int main(void)
     // 임시 장애물 위치
     const PUZZLE puzzles[] = {
         //==========0722=============
-       {0, WorldY - 50, WorldX, 50.0f, BLACK}, // 바닥1
-        {0, WorldY - screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥2
+        {0, WorldY - 50, WorldX, 50.0f, BLACK}, // 바닥1
+        {0, WorldY - screenHeight/5, WorldX, 50.0f, BLACK}, // 바닥2
         {0, WorldY - 2 * screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥3
         {WorldX - 50, WorldY - screenHeight / 3, 250.0f, screenHeight / 3 + 10 , BLACK}, // 바닥1 오른쪽 벽
         {WorldX - 350, WorldY - 50 - player.width * 2/3,  300.0f, player.width * 2/3 + 10, BLACK}, // 바닥1 오른쪽 단차(?)
