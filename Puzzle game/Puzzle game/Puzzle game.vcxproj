@@ -145,9 +145,6 @@
     <ClCompile Include="Puzzle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Player_Camera.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="Puzzle.h" />

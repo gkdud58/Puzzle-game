@@ -7,14 +7,13 @@ Player_Camera::Player_Camera()
     camera.target = { 0.0f, 0.0f };
     camera.offset = { 0.0f, 0.0f };
     camera.rotation = 0.0f;
-    camera.zoom;
+    camera.zoom=1.0f;
 }
 void Player_Camera::Update(float screenWidth, float screenHeight, float playerX, float playerY)
 {
     camera.target = { playerX + 20, playerY + 20};
     camera.offset = { screenWidth / 2, screenHeight / 2};
     camera.rotation = 0.0f;
-    camera.zoom;
 
     // 휠로 줌인아웃
     camera.zoom = expf(logf(camera.zoom) + (GetMouseWheelMove() * 0.1f));

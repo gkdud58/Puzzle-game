@@ -2,6 +2,7 @@
 #include "player.h"
 #include "Player_Camera.h"
 #include "Puzzle.h"
+#include <iostream>
 
 //========0722=========
 //struct Map1
@@ -31,7 +32,11 @@ int main(void)
     const float WorldX = 3000.0f;    // 맵 전체 가로 길이
     const float WorldY = 800.0f;     // 월드 기준 바닥의 y좌표 (고정)
     
-   
+
+    // 임시배경
+    Texture2D bgTexture = LoadTexture("Resource/test.png");
+
+
     // 임시 장애물 위치
     const PUZZLE puzzles[] = {
         //==========0722=============
@@ -99,13 +104,18 @@ int main(void)
         ClearBackground(RAYWHITE);
 
 
-
         BeginMode2D(camera.GetCamera());
+
 
 
 
         // 카메라 상관없이 고정인 것들 + 장애물이랑 퍼즐들 여기 아래에 추가 하면 됨
 
+        Rectangle source = { 0, 0, (float)bgTexture.width, (float)bgTexture.height }; // 원본 이미지 전체
+        Rectangle dest = { 0, 0, WorldX, WorldY };  // 그릴 목표 크기 (월드 크기에 맞춤)
+        Vector2 origin = { 0, 0 };
+
+        DrawTexturePro(bgTexture, source, dest, origin, 0.0f, WHITE);
 
         // 장애물들
         for (int i = 0; i < puzzleCount; i++)
@@ -127,11 +137,14 @@ int main(void)
         // 초기화
         EndMode2D();
         EndDrawing();
+
+        // 임시배경
        
     }
 
 
-    CloseWindow();   
+    CloseWindow();          
+    UnloadTexture(bgTexture);
 
     return 0;
 }
