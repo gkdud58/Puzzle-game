@@ -1,16 +1,18 @@
 ﻿  main.cpp
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\player.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
   (소스 파일 'main.cpp'을(를) 컴파일하는 중)
   
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(37,29): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(37,29): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,30): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,30): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(77,32): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Puzzle-game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(77,19): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(37,29): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(37,29): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,30): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(38,30): warning C4244: '초기화 중': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(87,32): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(87,19): warning C4244: '인수': 'const float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(157,67): warning C4838: 'double'에서 'float'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\puzzle game\Puzzle-game\Puzzle game\Puzzle game\main.cpp(157,67): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다.
   1 of 9 functions (11.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
-  Puzzle game.vcxproj -> C:\Puzzle-game\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe
+  Puzzle game.vcxproj -> C:\puzzle game\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe

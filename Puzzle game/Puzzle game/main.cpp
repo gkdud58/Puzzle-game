@@ -38,8 +38,8 @@ int main(void)
     const float screenHeight = GetMonitorHeight(0);
 
     // 월드 좌표
-    const float WorldX = 3000.0f;    // 맵 전체 가로 길이
-    const float WorldY = 800.0f;     // 월드 기준 바닥의 y좌표 (고정)
+    const float WorldX = 2000.0f;    // 맵 전체 가로 길이
+    const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
 
 
     // 임시배경
@@ -48,26 +48,36 @@ int main(void)
 
     // 임시 장애물 위치
     const PUZZLE puzzles[] = {
-        //==========0722=============
-        {0, WorldY - 50, WorldX, 50.0f, BLACK}, // 바닥1
-        {0, WorldY - screenHeight / 5, WorldX, 50.0f, BLACK}, // 바닥2
-        {0, WorldY - 2 * screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥3
-        {WorldX - 50, WorldY - screenHeight / 3, 250.0f, screenHeight / 3 + 10 , BLACK}, // 바닥1 오른쪽 벽
-        {WorldX - 350, WorldY - 50 - player.width * 2 / 3,  300.0f, player.width * 2 / 3 + 10, BLACK}, // 바닥1 오른쪽 단차(?)
-        {WorldX / 2, WorldY - player.width * 4, 200.0f, player.width * 4 + 10 , BLACK},
-        {WorldX / 2 - 100, WorldY - player.width * 3, 400.0f, player.width * 3 + 10 , BLACK},
-        {WorldX / 2 - 200, WorldY - player.width * 2, 600.0f, player.width * 2 + 10 , BLACK},
+        //==========0802=============
+        {-WorldX, -WorldY, 200.0, WorldY*2, GREEN}, // 왼쪽 벽
+        {WorldX, -WorldY, 200.0, WorldY * 2, GREEN}, // 오른쪽 벽
+
+        {-WorldX, 700, WorldX*2, 200.0, GREEN}, // 아래 벽
         //===========================
 
+        //==========0722=============
+        // 왜인지 모르겠으나 기존에 있던 바닥3만 보이오.
+        //
+        //
+        //{0, WorldY - 50, WorldX, 50.0f, BLACK} // 바닥1
+        //{0, WorldY - screenHeight / 5, WorldX, 50.0f, BLACK}, // 바닥2
+        {0, WorldY - 2 * screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥3
+        //{WorldX - 50, WorldY - screenHeight / 3, 250.0f, screenHeight / 3 + 10 , BLACK}, // 바닥1 오른쪽 벽
+        //{WorldX - 350, WorldY - 50 - player.width * 2 / 3,  300.0f, player.width * 2 / 3 + 10, BLACK}, // 바닥1 오른쪽 단차(?)
+        //{WorldX / 2, WorldY - player.width * 4, 200.0f, player.width * 4 + 10 , BLACK},
+        //{WorldX / 2 - 100, WorldY - player.width * 3, 400.0f, player.width * 3 + 10 , BLACK},
+        //{WorldX / 2 - 200, WorldY - player.width * 2, 600.0f, player.width * 2 + 10 , BLACK},
+        ////===========================
 
-        { 800.0, WorldY * 0.8 - 100, 100.0, 100.0,GRAY },
-        { 1500.0, WorldY * 0.8 - 100, 100.0, 100.0, GRAY },
-        { 2600.0, WorldY * 0.8 - 150, 150.0, 150.0 ,GRAY},
+
+        //{ 800.0, WorldY * 0.8 - 100, 100.0, 100.0,GRAY },
+        //{ 1500.0, WorldY * 0.8 - 100, 100.0, 100.0, GRAY },
+        //{ 2600.0, WorldY * 0.8 - 150, 150.0, 150.0 ,GRAY},
     };
 
 
     // 임시 장애물 ;;
-    const int puzzleCount = 8;
+    const int puzzleCount = 4;
     // 초록색 임시 장애물
     const float groundY = WorldY - 600;
 
@@ -144,7 +154,7 @@ int main(void)
             // 카메라 상관없이 고정인 것들 + 장애물이랑 퍼즐들 여기 아래에 추가 하면 됨
 
             Rectangle source = { 0, 0, (float)bgTexture.width, (float)bgTexture.height }; // 원본 이미지 전체
-            Rectangle dest = { 0, 0, WorldX, WorldY };  // 그릴 목표 크기 (월드 크기에 맞춤)
+            Rectangle dest = { -WorldX, -WorldY , WorldX*2, WorldY*1.5 };  // 그릴 목표 크기 (월드 크기에 맞춤)
             Vector2 origin = { 0, 0 };
 
             DrawTexturePro(bgTexture, source, dest, origin, 0.0f, WHITE);
