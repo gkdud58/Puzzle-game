@@ -27,7 +27,7 @@ int main(void)
 
     //시작화면 변수
     int screenState = SCREEN_TITLE;
-    Rectangle Gstart = { 0, 0, 200, 50 };
+    Rectangle Gstart = { 0, 0, 400, 100 };
 
 
     // 대충 화면
