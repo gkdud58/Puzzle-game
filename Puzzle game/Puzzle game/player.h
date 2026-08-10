@@ -30,7 +30,7 @@ public:
 
 
 	// 키 입력 & 이동 처리
-	void Update(float deltaTime, const PUZZLE puzzles[], int puzzleCount);
+	void Update(float deltaTime, const WALL puzzles[], int puzzleCount);
 	
 	float GetX();
 	float GetY();

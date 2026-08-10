@@ -16,7 +16,7 @@ Player::Player()
 
 }
 
-void Player::Update(float deltaTime, const PUZZLE puzzles[], int puzzleCount)
+void Player::Update(float deltaTime, const WALL puzzles[], int puzzleCount)
 {
 	float next_X = position.x; // 수평 충돌 확인을 위한 변수
 

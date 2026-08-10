@@ -24,6 +24,7 @@ int main(void)
     // 헤더파일 구조체? 가져오기
     Player player;
     Player_Camera camera;
+    Puzzle puz;
 
     //시작화면 변수
     int screenState = SCREEN_TITLE;
@@ -42,17 +43,25 @@ int main(void)
     const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
 
 
-    // 임시배경
-    Texture2D bgTexture = LoadTexture("Resource/test.png");
 
+
+
+    // 임시배경 **************** 바꿀 것
+    Texture2D bgTexture = LoadTexture("Resource/치이카와.png");
+
+    
+
+
+
+    /*
 
     // 임시 장애물 위치
-    const PUZZLE puzzles[] = {
+    const WALL puzzles[] = {
         //==========0802=============
-        {-WorldX, -WorldY, 200.0, WorldY*2, GREEN}, // 왼쪽 벽
-        {WorldX, -WorldY, 200.0, WorldY * 2, GREEN}, // 오른쪽 벽
+        {-WorldX, -WorldY, 200.0, WorldY*2, BLACK}, // 왼쪽 벽
+        {WorldX, -WorldY, 200.0, WorldY * 2, BLACK}, // 오른쪽 벽
 
-        {-WorldX, 700, WorldX*2, 200.0, GREEN}, // 아래 벽
+        {-WorldX, 700, WorldX*2, 200.0, BLACK}, // 아래 벽
         //===========================
 
         //==========0722=============
@@ -76,12 +85,15 @@ int main(void)
     };
 
 
-    // 임시 장애물 ;;
+
+
+    // 장애물 개수
     const int puzzleCount = 4;
     // 초록색 임시 장애물
     const float groundY = WorldY - 600;
 
 
+    */
 
     // 대충 화면22
     SetWindowSize(screenWidth, screenHeight);
@@ -89,7 +101,7 @@ int main(void)
 
 
     // 타이머 설정
-    SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 우리 게임에서 움직이는 것들이 빨리 움직임
+    SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 게임에서 움직이는 것들이 빨리 움직임
 
     //버튼 위치
     Gstart = { screenWidth / 2 -200, screenHeight / 2 -50, 400, 100 };
@@ -99,6 +111,11 @@ int main(void)
     while (!WindowShouldClose())
     {
         float deltaTime = GetFrameTime();
+
+
+        const WALL* wallArr;
+        int outCount;
+
 
         //시작화면 클릭
         Vector2 mousePoint = GetMousePosition();
@@ -114,7 +131,10 @@ int main(void)
 
         if (screenState == SCREEN_GAMEPLAY)
         {
-            player.Update(deltaTime, puzzles, puzzleCount);
+
+            puz.Create_Wall(WorldX, WorldY, wallArr, outCount);
+
+            player.Update(deltaTime, wallArr, outCount);
         }
 
 
@@ -153,12 +173,24 @@ int main(void)
 
             // 카메라 상관없이 고정인 것들 + 장애물이랑 퍼즐들 여기 아래에 추가 하면 됨
 
+
+
+
+
+            // 배경 draw **************** 바꿀 것
             Rectangle source = { 0, 0, (float)bgTexture.width, (float)bgTexture.height }; // 원본 이미지 전체
-            Rectangle dest = { -WorldX, -WorldY , WorldX*2, WorldY*1.5 };  // 그릴 목표 크기 (월드 크기에 맞춤)
+            Rectangle dest = { -WorldX, -WorldY * 0.6, WorldX*2.0, WorldY };  // 그릴 목표 크기 (월드 크기에 맞춤)
             Vector2 origin = { 0, 0 };
 
             DrawTexturePro(bgTexture, source, dest, origin, 0.0f, WHITE);
 
+
+
+            puz.Draw_Wall();
+            
+
+            /*
+            
             // 장애물들
             for (int i = 0; i < puzzleCount; i++)
             {
@@ -171,6 +203,8 @@ int main(void)
                     puzzles[i].color // 장애물 색깔
                 );
             }
+
+            */
 
             player.Render();
 
