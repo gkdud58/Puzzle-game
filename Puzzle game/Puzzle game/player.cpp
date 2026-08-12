@@ -1,9 +1,18 @@
 #include "player.h"
 #include "math.h"
 
+// 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
+const float screenWidth = GetMonitorWidth(0);
+const float screenHeight = GetMonitorHeight(0);
+
+// 월드 좌표
+const float WorldX = 1700.0f;    // 맵 전체 가로 길이
+const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
+
 Player::Player()
 {
-	position = { 100.0f, 100.0f };
+	// -WorldX + 1100, -WorldY + 1300
+	position = { 100, -1000 };
 
 	speed = 250.0f;
 

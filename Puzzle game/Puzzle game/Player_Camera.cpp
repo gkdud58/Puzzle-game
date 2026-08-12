@@ -12,7 +12,7 @@ Player_Camera::Player_Camera()
 void Player_Camera::Update(float screenWidth, float screenHeight, float playerX, float playerY)
 {
     camera.target = { playerX + 20, playerY + 20};
-    camera.offset = { screenWidth / 2, screenHeight / 2};
+    camera.offset = { screenWidth / 2 , screenHeight / 2 /* + 250 */};
     camera.rotation = 0.0f;
 
     // 휠로 줌인아웃
