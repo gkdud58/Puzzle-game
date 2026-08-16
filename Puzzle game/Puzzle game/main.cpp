@@ -34,6 +34,9 @@ int main(void)
     // 대충 화면
     InitWindow(800, 450, "Carry The Light");
 
+    // 게임 bgm
+    InitAudioDevice();
+
     // 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
     const float screenWidth = GetMonitorWidth(0);
     const float screenHeight = GetMonitorHeight(0);
@@ -49,7 +52,8 @@ int main(void)
     // 임시배경 **************** 바꿀 것
     Texture2D bgTexture = LoadTexture("Resource/치이카와.png");
 
-    
+    // 임시 bgm
+    Music bgm = LoadMusicStream("Resource/test_bgm1.ogg");
 
 
 
@@ -100,6 +104,9 @@ int main(void)
     ToggleFullscreen(); // 전체화면
 
 
+    PlayMusicStream(bgm);
+    SetMusicVolume(bgm, 0.5f);
+
     // 타이머 설정
     SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 게임에서 움직이는 것들이 빨리 움직임
 
@@ -120,6 +127,8 @@ int main(void)
         //시작화면 클릭
         Vector2 mousePoint = GetMousePosition();
         bool buttonHovered = CheckCollisionPointRec(mousePoint, Gstart);
+
+        UpdateMusicStream(bgm);
 
         if (screenState == SCREEN_TITLE)
         {
@@ -232,6 +241,9 @@ int main(void)
         // 임시배경
 
     }
+
+    UnloadMusicStream(bgm);
+    CloseAudioDevice();
 
 
     CloseWindow();
