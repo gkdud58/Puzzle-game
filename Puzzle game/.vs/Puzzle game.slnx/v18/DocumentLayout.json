@@ -48,11 +48,15 @@
               "RelativeDocumentMoniker": "Puzzle game\\main.cpp",
               "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp",
               "RelativeToolTip": "Puzzle game\\main.cpp",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAqwGsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-07-10T12:17:52.508Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -116,8 +120,7 @@
               "RelativeToolTip": "Puzzle game\\Player_Camera.cpp",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswBEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-13T20:27:11.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-13T20:27:11.954Z"
             },
             {
               "$type": "Document",

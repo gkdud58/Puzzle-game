@@ -105,7 +105,7 @@ int main(void)
 
 
     PlayMusicStream(bgm);
-    SetMusicVolume(bgm, 0.5f);
+    SetMusicVolume(bgm, 1.0f);
 
     // 타이머 설정
     SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 게임에서 움직이는 것들이 빨리 움직임
@@ -128,12 +128,13 @@ int main(void)
         Vector2 mousePoint = GetMousePosition();
         bool buttonHovered = CheckCollisionPointRec(mousePoint, Gstart);
 
-        UpdateMusicStream(bgm);
 
         if (screenState == SCREEN_TITLE)
         {
+            UpdateMusicStream(bgm);
             if (buttonHovered && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
             {
+        
                 screenState = SCREEN_GAMEPLAY;
             }
         }
