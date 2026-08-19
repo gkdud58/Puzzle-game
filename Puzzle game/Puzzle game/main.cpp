@@ -52,7 +52,7 @@ int main(void)
 
 
     // 임시배경 **************** 바꿀 것
-    Texture2D bgTexture = LoadTexture("Resource/치이카와.png");
+    Texture2D bgTexture = LoadTexture("Resource/back.png");
 
     // 임시 bgm
     Music bgm1 = LoadMusicStream("Resource/test_bgm1.ogg");

@@ -5,7 +5,7 @@
 
 static WALL wall[wallcount];
 static PUZZLE puzzle[puzzlecount];
-
+static SEESAW seesaw[1];
 
 Puzzle::Puzzle() 
 {
@@ -50,9 +50,16 @@ void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& 
     wall[16] = { -WorldX + 3000, -WorldY + 1900, WorldX * 2 - 3000, 70.0f, BLACK };
 
 
+
     // 시소
-    float seesaw_height = 50;
-    wall[16] = { -WorldX + 2400, -WorldY + 1800 - seesaw_height, seesaw_height, seesaw_height, BLACK };
+    float seesaw_height = 30;
+    wall[17] = { -WorldX + 2400, -WorldY + 1800 - seesaw_height, seesaw_height, seesaw_height, GREEN, TRI };
+
+
+
+
+
+
 
     wallArr = wall;
     outCount = wallcount;
@@ -67,23 +74,35 @@ void Puzzle::Create_Puzzle(float WorldX, float WorldY, const PUZZLE*& puzzleArr,
     
 
     puzzleArr = puzzle;
-    outCount = wallcount;
+    outCount = puzzlecount;
 }
 
+void Puzzle::Create_SeeSaw(float WorldX, float WorldY) 
+{
+
+}
 
 void Puzzle::Draw_Wall()
 {
-
+    
     for (int i = 0; i < wallcount; i++)
     {
-        DrawRectangle(
-            (int)wall[i].x,
-            (int)wall[i].y,
-            (int)wall[i].width,
-            (int)wall[i].height,
-
-            wall[i].color // 장애물 색깔
-
-        );
+        if (wall[i].shape == RECT)
+        {
+            DrawRectangle((int)wall[i].x, (int)wall[i].y, (int)wall[i].width, (int)wall[i].height, wall[i].color);
+        }
+        else if (wall[i].shape == TRI)
+        {
+            DrawTriangle({ wall[i].x, wall[i].y + wall[i].height }, { wall[i].x + wall[i].width, wall[i].y + wall[i].height }, { wall[i].x + wall[i].width / 2, wall[i].y }, wall[i].color);
+        }
+        else if (wall[i].shape == CIR)
+        {
+            float radius = wall[i].width / 2;
+            DrawCircle((int)(wall[i].x + radius), (int)(wall[i].y + radius), radius, wall[i].color);
+        }
+        else
+        {
+            DrawRectangle((int)wall[i].x, (int)wall[i].y, (int)wall[i].width, (int)wall[i].height, wall[i].color);
+        }
     }
 }
