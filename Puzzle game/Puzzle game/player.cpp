@@ -7,7 +7,7 @@ const float screenHeight = GetMonitorHeight(0);
 
 // 월드 좌표
 const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
+const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 (고정)
 
 Player::Player()
 {

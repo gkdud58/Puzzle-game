@@ -20,7 +20,7 @@ void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& 
     // 전체 맵 벽
     wall[0] = { -WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };              // 왼쪽 세로 벽
     wall[1] = { WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };               // 오른쪽 세로 벽
-    wall[2] = { -WorldX, -WorldY + 2450, WorldX * 2, 200.0f, BLACK };       // 아래 바닥
+    wall[2] = { -WorldX, -WorldY + 2750, WorldX * 2, 200.0f, BLACK };       // 아래 바닥
     wall[3] = { -WorldX, -WorldY + 650, WorldX * 2, 200.0f, BLACK };        // 위 천장
 
 
@@ -36,12 +36,23 @@ void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& 
 
     float a = 100;
     // 위 크로스 파쿠르
-    wall[9] = { -WorldX + 2400 - a, -WorldY + 1300, a, 20.0f, BLACK };
-    wall[10] = { -WorldX + 1100 + 1000, -WorldY + 1300 + 100, a, 20.0f, BLACK };
-    wall[11] = { -WorldX + 2400 - a, -WorldY + 1300 + 200, a, 20.0f, BLACK };
-    wall[12] = { -WorldX + 1100 + 1000, -WorldY + 1300 + 300 - 20, a, 20.0f, BLACK };
+    wall[9]  = { -WorldX + 1100 + 1000, -WorldY + 1300, a, 20.0f, BLACK };
+    wall[10] = { -WorldX + 2400 - a, -WorldY + 1300 + 90, a, 20.0f, BLACK };
+    wall[11] = { -WorldX + 1100 + 1000, -WorldY + 1300 + 90*2, a, 20.0f, BLACK };
+    wall[12] = { -WorldX + 2400 - a, -WorldY + 1300 + 280, a, 20.0f, BLACK };
+    wall[13] = { -WorldX + 1100 + 1000, -WorldY + 1300 + 90*4, a, 20.0f, BLACK };
+
+    wall[14] = { -WorldX + 1800, -WorldY + 1300, 300, 500, BLACK };
 
 
+    // 중앙 시소 부분 바닥
+    wall[15] = { -WorldX + 1800, -WorldY + 1800, WorldX * 2 - 2350, 70.0f, BLACK };
+    wall[16] = { -WorldX + 3000, -WorldY + 1900, WorldX * 2 - 3000, 70.0f, BLACK };
+
+
+    // 시소
+    float seesaw_height = 50;
+    wall[16] = { -WorldX + 2400, -WorldY + 1800 - seesaw_height, seesaw_height, seesaw_height, BLACK };
 
     wallArr = wall;
     outCount = wallcount;

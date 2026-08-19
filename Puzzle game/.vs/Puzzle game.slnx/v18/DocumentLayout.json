@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Puzzle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Puzzle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Player_Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Puzzle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Player_Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Puzzle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AD90E12-EFB1-48FD-825E-A4A02CAF342F}|Puzzle game\\Puzzle game.vcxproj|solutionrelative:Puzzle game\\Player_Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,25 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp",
               "RelativeDocumentMoniker": "Puzzle game\\main.cpp",
               "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\main.cpp",
               "RelativeToolTip": "Puzzle game\\main.cpp",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAqwGsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-07-10T12:17:52.508Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -72,23 +68,25 @@
               "RelativeToolTip": "Puzzle game\\player.h",
               "ViewState": "AgIAABgAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-07-18T13:57:21.33Z"
+              "WhenOpened": "2026-07-18T13:57:21.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "player.cpp",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\player.cpp",
               "RelativeDocumentMoniker": "Puzzle game\\player.cpp",
               "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\player.cpp",
               "RelativeToolTip": "Puzzle game\\player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-12T11:09:52.332Z"
+              "WhenOpened": "2026-07-12T11:09:52.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Puzzle.h",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.h",
               "RelativeDocumentMoniker": "Puzzle game\\Puzzle.h",
@@ -96,35 +94,38 @@
               "RelativeToolTip": "Puzzle game\\Puzzle.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-07-13T22:02:50.021Z"
+              "WhenOpened": "2026-07-13T22:02:50.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Puzzle.cpp",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.cpp",
               "RelativeDocumentMoniker": "Puzzle game\\Puzzle.cpp",
               "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Puzzle.cpp",
               "RelativeToolTip": "Puzzle game\\Puzzle.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-13T22:02:53.214Z"
+              "WhenOpened": "2026-07-13T22:02:53.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Player_Camera.cpp",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.cpp",
               "RelativeDocumentMoniker": "Puzzle game\\Player_Camera.cpp",
               "ToolTip": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.cpp",
               "RelativeToolTip": "Puzzle game\\Player_Camera.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswBEAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-13T20:27:11.954Z"
+              "WhenOpened": "2026-07-13T20:27:11.954Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Player_Camera.h",
               "DocumentMoniker": "C:\\puzzle game\\Puzzle-game\\Puzzle game\\Puzzle game\\Player_Camera.h",
               "RelativeDocumentMoniker": "Puzzle game\\Player_Camera.h",

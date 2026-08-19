@@ -34,8 +34,10 @@ int main(void)
     // 대충 화면
     InitWindow(800, 450, "Carry The Light");
 
+
     // 게임 bgm
     InitAudioDevice();
+
 
     // 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
     const float screenWidth = GetMonitorWidth(0);
@@ -43,7 +45,7 @@ int main(void)
 
     // 월드 좌표
     const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-    const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
+    const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 (고정)
 
 
 
@@ -53,7 +55,8 @@ int main(void)
     Texture2D bgTexture = LoadTexture("Resource/치이카와.png");
 
     // 임시 bgm
-    Music bgm = LoadMusicStream("Resource/test_bgm1.ogg");
+    Music bgm1 = LoadMusicStream("Resource/test_bgm1.ogg");
+    Music bgm2 = LoadMusicStream("Resource/bgm2.ogg");
 
 
 
@@ -104,8 +107,12 @@ int main(void)
     ToggleFullscreen(); // 전체화면
 
 
-    PlayMusicStream(bgm);
-    SetMusicVolume(bgm, 1.0f);
+    PlayMusicStream(bgm1);
+    SetMusicVolume(bgm1, 1.0f);
+
+    PlayMusicStream(bgm2);
+    SetMusicVolume(bgm2, 0.3f);
+
 
     // 타이머 설정
     SetTargetFPS(60); // 게임 루프 초당 60프레임이라는 뜻, 숫자가 클수록 게임에서 움직이는 것들이 빨리 움직임
@@ -131,7 +138,7 @@ int main(void)
 
         if (screenState == SCREEN_TITLE)
         {
-            UpdateMusicStream(bgm);
+            // UpdateMusicStream(bgm1);
             if (buttonHovered && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
             {
         
@@ -141,6 +148,7 @@ int main(void)
 
         if (screenState == SCREEN_GAMEPLAY)
         {
+            // UpdateMusicStream(bgm2);
 
             puz.Create_Wall(WorldX, WorldY, wallArr, outCount);
 
@@ -243,7 +251,8 @@ int main(void)
 
     }
 
-    UnloadMusicStream(bgm);
+    UnloadMusicStream(bgm1);
+    UnloadMusicStream(bgm2);
     CloseAudioDevice();
 
 
