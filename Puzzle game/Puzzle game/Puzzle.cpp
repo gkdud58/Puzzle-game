@@ -15,7 +15,7 @@ Puzzle::Puzzle()
 void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& outCount)
 {
     // ******* 장애물 추가하는 곳 *******
-    // wall[wallcount] = { x축, y축, 가로크기, 세로크기, 색깔};
+    // wall[wallcount] = { x축, y축, 가로크기, 세로크기, 색깔, 모양(아무것도 안 적으면 사각형으로 생성)};
 
     // 전체 맵 벽
     wall[0] = { -WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };              // 왼쪽 세로 벽
