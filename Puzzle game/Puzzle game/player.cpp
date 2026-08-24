@@ -2,12 +2,12 @@
 #include "math.h"
 
 // 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
-//const float screenWidth = GetMonitorWidth(0);
-//const float screenHeight = GetMonitorHeight(0);
+const float screenWidth = GetMonitorWidth(0);
+const float screenHeight = GetMonitorHeight(0);
 
 // 월드 좌표
 const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-const float WorldY = 1300.0f;     // 월드 기준 바닥의 y좌표 (고정)
+const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 (고정)
 
 Player::Player()
 {
@@ -23,10 +23,10 @@ Player::Player()
 
 	isGrounded = false;
 
-	//이미지(투명이 아니라 수정해야 할듯 ㅎ)
-	idle = LoadTexture(R"(C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\Resource\player_idle.png)");
+	//이미지(투명이 아니라 수정해야 할듯)
+	idle = LoadTexture(R"(Resource\player_idle.png)");
 
-	move = LoadTexture(R"(C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\Resource\player_move.png)");
+	move = LoadTexture(R"(Resource\player_move.png)");
 
 
 	//프레임

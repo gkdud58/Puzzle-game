@@ -23,7 +23,6 @@ const int SCREEN_MENU = 2;
 int main(void)
 {
    
-
     //시작화면 변수
     int screenState = SCREEN_TITLE;
     Rectangle Gstart = { 0, 0, 400, 100 };
@@ -33,6 +32,7 @@ int main(void)
     InitWindow(800, 450, "Carry The Light");
     SetExitKey(KEY_NULL);
 
+  
     // 헤더파일 구조체? 가져오기
     Player player;
     Player_Camera camera;
