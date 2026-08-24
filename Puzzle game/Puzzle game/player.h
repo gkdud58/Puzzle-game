@@ -20,9 +20,25 @@ private:
 	// 상하 속도(중력)
 	float velocityY;
 
+	Texture2D idle;
+	Texture2D move;
+
+	int curFrame;
+	int idleFramecnt;
+	int moveFramecnt;
+
+	float frameTimer;
+	float frameDuration;
+
+	bool isMove;
+	bool facingLeft;
+
+	void UpdateAnimation(float deltaTime);
+
 public:
 
 	Player();
+	~Player();
 
 	// 크기 // private -> public 이동 (main.cpp에서 사용하려고)
 	float width;

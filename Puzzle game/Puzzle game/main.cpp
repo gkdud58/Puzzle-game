@@ -21,10 +21,7 @@ const int SCREEN_GAMEPLAY = 1;
 // 어쩌구저쩌구
 int main(void)
 {
-    // 헤더파일 구조체? 가져오기
-    Player player;
-    Player_Camera camera;
-    Puzzle puz;
+   
 
     //시작화면 변수
     int screenState = SCREEN_TITLE;
@@ -33,6 +30,11 @@ int main(void)
 
     // 대충 화면
     InitWindow(800, 450, "Carry The Light");
+
+    // 헤더파일 구조체? 가져오기
+    Player player;
+    Player_Camera camera;
+    Puzzle puz;
 
 
     // 게임 bgm
@@ -226,6 +228,8 @@ int main(void)
 
             player.Render();
 
+            EndMode2D();EndMode2D();
+
         }
         else if (screenState == SCREEN_TITLE)
         {
@@ -244,7 +248,7 @@ int main(void)
 
 
         // 초기화
-        EndMode2D();
+    
         EndDrawing();
 
         // 임시배경
@@ -256,8 +260,9 @@ int main(void)
     CloseAudioDevice();
 
 
-    CloseWindow();
     UnloadTexture(bgTexture);
+    CloseWindow();
+    
 
     return 0;
 }

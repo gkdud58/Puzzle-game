@@ -1,17 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\퍼즐게임\\puzzle-game\\puzzle game\\puzzle game\\puzzle.cpp",
+        "Source": "c:\\puzzle\\puzzle-game\\puzzle game\\puzzle game\\puzzle.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\퍼즐게임\\puzzle-game\\puzzle game\\puzzle game\\puzzle.h",
-            "c:\\퍼즐게임\\puzzle-game\\puzzle game\\packages\\raylib.5.5.0\\build\\native\\include\\raylib.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdarg.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\sal.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\concurrencysal.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdbool.h"
+            "c:\\puzzle\\puzzle-game\\puzzle game\\puzzle game\\puzzle.h",
+            "c:\\puzzle\\puzzle-game\\puzzle game\\packages\\raylib.5.5.0\\build\\native\\include\\raylib.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\stdarg.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\sal.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\concurrencysal.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\stdbool.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

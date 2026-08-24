@@ -2,12 +2,12 @@
 #include "math.h"
 
 // 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
-const float screenWidth = GetMonitorWidth(0);
-const float screenHeight = GetMonitorHeight(0);
+//const float screenWidth = GetMonitorWidth(0);
+//const float screenHeight = GetMonitorHeight(0);
 
 // 월드 좌표
 const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 (고정)
+const float WorldY = 1300.0f;     // 월드 기준 바닥의 y좌표 (고정)
 
 Player::Player()
 {
@@ -16,13 +16,32 @@ Player::Player()
 
 	speed = 500.0f;
 
-	width = 50.0f;
-	height = 50.0f;
+	width = 100.0f;
+	height = 120.0f;
 
 	velocityY = 0;
 
 	isGrounded = false;
 
+	//이미지(투명이 아니라 수정해야 할듯 ㅎ)
+	idle = LoadTexture(R"(C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\Resource\player_idle.png)");
+
+	move = LoadTexture(R"(C:\puzzle\Puzzle-game\Puzzle game\Puzzle game\Resource\player_move.png)");
+
+
+	//프레임
+	idleFramecnt = 4;
+	moveFramecnt = 3;
+
+	curFrame = 0;
+
+	frameTimer = 0.0f;
+
+	// 프레임당 시간
+	frameDuration = 0.12f;
+
+	isMove = false;
+	facingLeft = false;
 }
 
 void Player::Update(float deltaTime, const WALL puzzles[], int puzzleCount)
@@ -32,10 +51,12 @@ void Player::Update(float deltaTime, const WALL puzzles[], int puzzleCount)
 	// 양 옆 이동
 	if (IsKeyDown(KEY_D)) {
 		next_X += speed * deltaTime;
+		facingLeft = false;
 	}
 
 	if (IsKeyDown(KEY_A)) {
 		next_X -= speed * deltaTime;
+		facingLeft = true;
 	}
 
 	Rectangle NearObs = { next_X, position.y, width, height }; // 근처 장애물
@@ -120,6 +141,10 @@ void Player::Update(float deltaTime, const WALL puzzles[], int puzzleCount)
 		isGrounded = false;
 	}
 
+	isMove = !block_X && (IsKeyDown(KEY_A) || IsKeyDown(KEY_D));
+
+	UpdateAnimation(deltaTime);
+
 	
 }
 float Player::GetX() {
@@ -130,14 +155,76 @@ float Player::GetY() {
 	return position.y;
 }
 
+void Player::UpdateAnimation(float deltaTime)
+{
+	frameTimer += deltaTime;
+
+	if (frameTimer >= frameDuration) {
+		frameTimer = 0.0f;
+		curFrame++;
+
+		if (isMove) {
+			if (curFrame >= moveFramecnt) {
+				curFrame = 0;
+			}
+		}
+
+		else {
+			if (curFrame >= idleFramecnt) {
+				curFrame = 0;
+			}
+		}
+	}
+}
+
 void Player::Render()
 {
-	DrawRectangle(
-		static_cast<int>(position.x),
-		static_cast<int>(position.y),
-		static_cast<int>(width),
-		static_cast<int>(height),
-		BLUE
-	);
+	Texture2D texture;
 
+	int frameCnt;
+
+	if (isMove) {
+		texture = move;
+		frameCnt = moveFramecnt;
+	}
+	else {
+		texture = idle;
+		frameCnt = idleFramecnt;
+	}
+
+	float_t frameWidth = (float)texture.width / frameCnt;
+
+	Rectangle source = {
+		curFrame * frameWidth, 0, frameWidth, (float)texture.height };
+
+	// 왼쪽바라볼때 좌우반전
+	if (facingLeft) {
+		source.x += frameWidth;
+		source.width = -frameWidth;
+	}
+
+	// 출력될 위치/크기
+
+	Rectangle destination = {
+		position.x,
+		position.y,
+		width,
+		height };
+
+	DrawTexturePro(
+		texture,
+		source,
+		destination,
+		{ 0, 0 },
+		0.0f,
+		WHITE
+	);
 }
+
+Player::~Player()
+{
+	UnloadTexture(idle);
+	UnloadTexture(move);
+}
+
+
