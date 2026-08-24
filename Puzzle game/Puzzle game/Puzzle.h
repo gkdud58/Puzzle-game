@@ -6,7 +6,7 @@
 // main.cpp, player.cpp, Puzzle.cpp 전부 이 값 하나만 씀 -> 좌표계가 안 어긋남
 // 맵 크기를 바꾸고 싶으면 여기 값만 수정하면 됨
 constexpr float WORLD_X = 1700.0f;   // 맵 전체 가로 절반 길이
-constexpr float WORLD_Y = 1400.0f;   // 맵 전체 세로 절반 길이
+constexpr float WORLD_Y = 1800.0f;   // 맵 전체 세로 절반 길이
 
 enum SHAPE
 {

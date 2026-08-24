@@ -68,48 +68,6 @@ int main(void)
 
 
 
-    /*
-
-    // 임시 장애물 위치
-    const WALL puzzles[] = {
-        //==========0802=============
-        {-WorldX, -WorldY, 200.0, WorldY*2, BLACK}, // 왼쪽 벽
-        {WorldX, -WorldY, 200.0, WorldY * 2, BLACK}, // 오른쪽 벽
-
-        {-WorldX, 700, WorldX*2, 200.0, BLACK}, // 아래 벽
-        //===========================
-
-        //==========0722=============
-        // 왜인지 모르겠으나 기존에 있던 바닥3만 보이오.
-        //
-        //
-        //{0, WorldY - 50, WorldX, 50.0f, BLACK} // 바닥1
-        //{0, WorldY - screenHeight / 5, WorldX, 50.0f, BLACK}, // 바닥2
-        {0, WorldY - 2 * screenHeight / 3, WorldX, 50.0f, BLACK}, // 바닥3
-        //{WorldX - 50, WorldY - screenHeight / 3, 250.0f, screenHeight / 3 + 10 , BLACK}, // 바닥1 오른쪽 벽
-        //{WorldX - 350, WorldY - 50 - player.width * 2 / 3,  300.0f, player.width * 2 / 3 + 10, BLACK}, // 바닥1 오른쪽 단차(?)
-        //{WorldX / 2, WorldY - player.width * 4, 200.0f, player.width * 4 + 10 , BLACK},
-        //{WorldX / 2 - 100, WorldY - player.width * 3, 400.0f, player.width * 3 + 10 , BLACK},
-        //{WorldX / 2 - 200, WorldY - player.width * 2, 600.0f, player.width * 2 + 10 , BLACK},
-        ////===========================
-
-
-        //{ 800.0, WorldY * 0.8 - 100, 100.0, 100.0,GRAY },
-        //{ 1500.0, WorldY * 0.8 - 100, 100.0, 100.0, GRAY },
-        //{ 2600.0, WorldY * 0.8 - 150, 150.0, 150.0 ,GRAY},
-    };
-
-
-
-
-    // 장애물 개수
-    const int puzzleCount = 4;
-    // 초록색 임시 장애물
-    const float groundY = WorldY - 600;
-
-
-    */
-
     // 대충 화면22
     SetWindowSize((int)screenWidth, (int)screenHeight);
     ToggleFullscreen(); // 전체화면
