@@ -12,7 +12,7 @@ const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 
 Player::Player()
 {
 	// -WorldX + 1100, -WorldY + 1300
-	position = { 100, -500};
+	position = { 100, -1000};
 
 	speed = 500.0f;
 
