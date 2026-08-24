@@ -221,6 +221,7 @@ void Player::Render()
 	);
 }
 
+
 Player::~Player()
 {
 	UnloadTexture(idle);
@@ -228,3 +229,10 @@ Player::~Player()
 }
 
 
+
+void Player::Reset()
+{
+	position = { 100, -1000 };
+	velocityY = 0;
+	isGrounded = false;
+}

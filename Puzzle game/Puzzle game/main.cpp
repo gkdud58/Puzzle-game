@@ -17,6 +17,7 @@
 //화면 상태 상수(겜시작/플레이)
 const int SCREEN_TITLE = 0;
 const int SCREEN_GAMEPLAY = 1;
+const int SCREEN_MENU = 2;
 
 // 어쩌구저쩌구
 int main(void)
@@ -30,6 +31,7 @@ int main(void)
 
     // 대충 화면
     InitWindow(800, 450, "Carry The Light");
+    SetExitKey(KEY_NULL);
 
     // 헤더파일 구조체? 가져오기
     Player player;
@@ -54,7 +56,7 @@ int main(void)
 
 
     // 임시배경 **************** 바꿀 것
-    Texture2D bgTexture = LoadTexture("Resource/back.png");
+    Texture2D bgTexture = LoadTexture("Resource/back.jpg");
 
     // 임시 bgm
     Music bgm1 = LoadMusicStream("Resource/test_bgm1.ogg");
@@ -123,8 +125,14 @@ int main(void)
     Gstart = { screenWidth / 2 -200, screenHeight / 2 -50, 400, 100 };
 
 
+    // 메뉴 변수
+    bool shouldExit = false;
+    int prevScreenState = SCREEN_GAMEPLAY; //메뉴 전 상태(게임중)기억
+    Rectangle btnSettings = { screenWidth / 2 - 200, screenHeight / 2 - 80, 400, 80 };
+    Rectangle btnExit = { screenWidth / 2 - 200, screenHeight / 2 + 20, 400, 80 };
+
     // Render, Update, Draw 여기서 함
-    while (!WindowShouldClose())
+    while (!WindowShouldClose() && !shouldExit)
     {
         float deltaTime = GetFrameTime();
 
@@ -136,6 +144,20 @@ int main(void)
         //시작화면 클릭
         Vector2 mousePoint = GetMousePosition();
         bool buttonHovered = CheckCollisionPointRec(mousePoint, Gstart);
+
+        //esc로 메뉴 열기/닫기
+        if (IsKeyPressed(KEY_ESCAPE))
+        {
+            if (screenState == SCREEN_GAMEPLAY)
+            {
+                prevScreenState = screenState;
+                screenState = SCREEN_MENU;
+            }
+            else if (screenState == SCREEN_MENU)
+            {
+                screenState = prevScreenState; //게임으로 복귀
+            }
+        }
 
 
         if (screenState == SCREEN_TITLE)
@@ -155,8 +177,31 @@ int main(void)
             puz.Create_Wall(WorldX, WorldY, wallArr, outCount);
 
             player.Update(deltaTime, wallArr, outCount);
+
+            //리셋
+            if (IsKeyPressed(KEY_R))
+            {
+                player.Reset();
+            }
         }
 
+        else if (screenState == SCREEN_MENU)
+        {
+            bool exitHovered = CheckCollisionPointRec(mousePoint, btnExit);
+            bool settingsHovered = CheckCollisionPointRec(mousePoint, btnSettings);
+
+            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+            {
+                if (exitHovered)
+                {
+                    shouldExit = true; //게임 종료
+                }
+                else if (settingsHovered)
+                {
+                    //설정버튼내용들 왈르르르ㅡㄹ
+                }
+            }
+        }
 
 
 
@@ -244,6 +289,37 @@ int main(void)
                 (int)(Gstart.x + Gstart.width / 2 - textWidth / 2),
                 (int)(Gstart.y + Gstart.height / 2 - 10),
                 20, WHITE);
+        }
+
+        //메뉴화면
+        else if (screenState == SCREEN_MENU)
+        {
+            //배경
+            DrawRectangle(0, 0, (int)screenWidth, (int)screenHeight, BLACK);
+
+            bool exitHovered = CheckCollisionPointRec(mousePoint, btnExit);
+            bool settingsHovered = CheckCollisionPointRec(mousePoint, btnSettings);
+
+            //설정
+            DrawRectangleRec(btnSettings, settingsHovered ? DARKGRAY : GRAY);
+            DrawRectangleLinesEx(btnSettings, 2, BLACK);
+            const char* settingsText = "SETTING";
+            int settingsTextWidth = MeasureText(settingsText, 20);
+            DrawText(settingsText,
+                (int)(btnSettings.x + btnSettings.width / 2 - settingsTextWidth / 2),
+                (int)(btnSettings.y + btnSettings.height / 2 - 10),
+                20, WHITE);
+
+            //게임 종료
+            DrawRectangleRec(btnExit, exitHovered ? DARKGRAY : GRAY);
+            DrawRectangleLinesEx(btnExit, 2, BLACK);
+            const char* exitText = "EXIT";
+            int exitTextWidth = MeasureText(exitText, 20);
+            DrawText(exitText,
+                (int)(btnExit.x + btnExit.width / 2 - exitTextWidth / 2),
+                (int)(btnExit.y + btnExit.height / 2 - 10),
+                20, WHITE);
+
         }
 
 
