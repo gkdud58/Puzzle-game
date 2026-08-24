@@ -1,23 +1,20 @@
 #include "player.h"
 #include "math.h"
 
-// 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
-const float screenWidth = GetMonitorWidth(0);
-const float screenHeight = GetMonitorHeight(0);
-
-// 월드 좌표
-const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-const float WorldY = screenHeight;     // 월드 기준 바닥의 y좌표 (고정)
+// 주의: 예전엔 여기서 GetMonitorWidth(0)/GetMonitorHeight(0)을 전역변수로 호출했었는데,
+// 이 코드는 InitWindow()보다 먼저(프로그램 시작 시점에) 실행돼서 항상 0을 반환하는 버그가 있었음.
+// 게다가 맵 크기(WorldX, WorldY)를 여기서 따로 만들어서 main.cpp가 만드는 맵 좌표계랑 어긋났음.
+// -> WORLD_X, WORLD_Y는 이제 Puzzle.h에 고정값으로 정의해서 모든 파일이 공유함.
 
 Player::Player()
 {
-	// -WorldX + 1100, -WorldY + 1300
-	position = { 100, WorldY-WorldY*2};
-
 	speed = 500.0f;
 
 	width = 80.0f;
 	height = 100.0f;
+
+	// 시작 발판(Puzzle.cpp의 wall[7], x=-WORLD_X+1100, y=-WORLD_Y+1300) 위에 스폰
+	position = { -WORLD_X + 1100, -WORLD_Y + 1300 - height };
 
 	velocityY = 0;
 
@@ -232,7 +229,7 @@ Player::~Player()
 
 void Player::Reset()
 {
-	position = { 100, -1000 };
+	position = { -WORLD_X + 1100, -WORLD_Y + 1300 - height };
 	velocityY = 0;
 	isGrounded = false;
 }

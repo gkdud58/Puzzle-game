@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\puzzle\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe</FullPath>
+      <FullPath>C:\puzzle game\Puzzle-game\Puzzle game\x64\Release\Puzzle game.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

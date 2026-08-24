@@ -43,13 +43,17 @@ int main(void)
     InitAudioDevice();
 
 
-    // 가짜 전역변수들(절대 바뀌지 않는 것들 ex.컴퓨터화면 크기)
-    const float screenWidth = GetMonitorWidth(0);
-    const float screenHeight = GetMonitorHeight(0);
+    // 현재 창이 열려있는 모니터의 실제 해상도 (반드시 InitWindow 이후에 호출해야 함)
+    // GetMonitorWidth(0)처럼 모니터 번호를 0으로 고정하면 멀티 모니터 환경에서
+    // 게임 창이 다른 모니터에 있을 때 엉뚱한 해상도를 가져오는 문제가 있어서
+    // GetCurrentMonitor()로 지금 창이 실제로 있는 모니터를 구함.
+    // 이 값은 UI 배치/카메라 화면 크기 계산에만 쓰고, 맵 크기 계산에는 쓰지 않음!
+    const int currentMonitor = GetCurrentMonitor();
+    const float screenWidth = (float)GetMonitorWidth(currentMonitor);
+    const float screenHeight = (float)GetMonitorHeight(currentMonitor);
 
-    // 월드 좌표
-    const float WorldX = 1700.0f;    // 맵 전체 가로 길이
-    const float WorldY = screenHeight + 300;     // 월드 기준 바닥의 y좌표 (고정)
+    // 월드(맵) 좌표 - 모니터 해상도와 무관하게 고정 (Puzzle.h의 WORLD_X, WORLD_Y)
+    // player.cpp와 값을 공유하기 때문에 모니터가 달라져도 맵/스폰 위치가 어긋나지 않음
 
 
 
@@ -107,7 +111,7 @@ int main(void)
     */
 
     // 대충 화면22
-    SetWindowSize(screenWidth, screenHeight);
+    SetWindowSize((int)screenWidth, (int)screenHeight);
     ToggleFullscreen(); // 전체화면
 
 
@@ -174,7 +178,7 @@ int main(void)
         {
             // UpdateMusicStream(bgm2);
 
-            puz.Create_Wall(WorldX, WorldY, wallArr, outCount);
+            puz.Create_Wall(WORLD_X, WORLD_Y, wallArr, outCount);
 
             player.Update(deltaTime, wallArr, outCount);
 
@@ -244,7 +248,7 @@ int main(void)
 
             // 배경 draw **************** 바꿀 것
             Rectangle source = { 0, 0, (float)bgTexture.width, (float)bgTexture.height }; // 원본 이미지 전체
-            Rectangle dest = { -WorldX, -WorldY * 0.6, WorldX*2.0, WorldY };  // 그릴 목표 크기 (월드 크기에 맞춤)
+            Rectangle dest = { -WORLD_X, -WORLD_Y * 0.6f, WORLD_X * 2.0f, WORLD_Y };  // 그릴 목표 크기 (월드 크기에 맞춤)
             Vector2 origin = { 0, 0 };
 
             DrawTexturePro(bgTexture, source, dest, origin, 0.0f, WHITE);
