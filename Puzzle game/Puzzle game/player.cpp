@@ -141,3 +141,10 @@ void Player::Render()
 	);
 
 }
+
+void Player::Reset()
+{
+	position = { 100, -1000 };
+	velocityY = 0;
+	isGrounded = false;
+}

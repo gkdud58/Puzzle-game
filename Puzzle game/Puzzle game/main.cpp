@@ -153,6 +153,12 @@ int main(void)
             puz.Create_Wall(WorldX, WorldY, wallArr, outCount);
 
             player.Update(deltaTime, wallArr, outCount);
+
+            //리셋
+            if (IsKeyPressed(KEY_R))
+            {
+                player.Reset();
+            }
         }
 
 

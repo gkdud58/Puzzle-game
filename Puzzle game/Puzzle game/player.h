@@ -38,5 +38,7 @@ public:
 	// 출력
 	void Render();
 
+	//초기화
+	void Reset();
 
 };
