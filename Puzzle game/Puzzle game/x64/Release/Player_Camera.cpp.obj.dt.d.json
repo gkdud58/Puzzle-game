@@ -1,20 +1,20 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\puzzle game\\puzzle-game\\puzzle game\\puzzle game\\player_camera.cpp",
+        "Source": "c:\\퍼즐게임\\puzzle-game\\puzzle game\\puzzle game\\player_camera.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\puzzle game\\puzzle-game\\puzzle game\\puzzle game\\player_camera.h",
-            "c:\\puzzle game\\puzzle-game\\puzzle game\\packages\\raylib.5.5.0\\build\\native\\include\\raylib.h",
+            "c:\\퍼즐게임\\puzzle-game\\puzzle game\\puzzle game\\player_camera.h",
+            "c:\\퍼즐게임\\puzzle-game\\puzzle game\\packages\\raylib.5.5.0\\build\\native\\include\\raylib.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdarg.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\sal.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\concurrencysal.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdbool.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\math.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_math.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt.h"
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\math.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_math.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

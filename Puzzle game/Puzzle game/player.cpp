@@ -14,7 +14,7 @@ Player::Player()
 	// -WorldX + 1100, -WorldY + 1300
 	position = { 100, -1000 };
 
-	speed = 250.0f;
+	speed = 500.0f;
 
 	width = 50.0f;
 	height = 50.0f;

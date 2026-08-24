@@ -18,10 +18,12 @@ void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& 
     // wall[wallcount] = { x축, y축, 가로크기, 세로크기, 색깔, 모양(아무것도 안 적으면 사각형으로 생성)};
 
     // 전체 맵 벽
-    wall[0] = { -WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };              // 왼쪽 세로 벽
-    wall[1] = { WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };               // 오른쪽 세로 벽
-    wall[2] = { -WorldX, -WorldY + 2750, WorldX * 2, 200.0f, BLACK };       // 아래 바닥
-    wall[3] = { -WorldX, -WorldY + 650, WorldX * 2, 200.0f, BLACK };        // 위 천장
+    wall[0] = { -WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };                                   // 왼쪽 세로 벽
+    wall[1] = { WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };                                    // 오른쪽 세로 벽
+    wall[2] = { -WorldX, -WorldY + 2750, 2 * WorldX - 2000.0f, 200.0f,BLACK };                   // 중간 바닥 1 
+    wall[18] = { -WorldX + 2000, -WorldY + 2750, 2 * WorldX - 2000.0f, 200.0f, BLACK };          // 중간 바닥 2
+    wall[19] = { -WorldX, WorldY - 200, WorldX * 2, 200.0f, BLACK };                             // 아래 바닥
+    wall[3] = { -WorldX, -WorldY + 650, WorldX * 2, 200.0f, BLACK };                             // 위 천장
 
 
 
@@ -57,9 +59,41 @@ void Puzzle::Create_Wall(float WorldX, float WorldY, const WALL*& wallArr, int& 
 
 
 
+    // 아래 장애물 배치
+    // 표지판 
+    wall[20] = { -WorldX + 1000, WorldY - 750, 100.0f, 600.0f, BLACK };     // 기둥
+    // 홀수 - 오른쪽 / 짝수 - 왼쪽
+    wall[21] = { -WorldX + 1100, WorldY - 500, 100.0f, 30.0f, BLACK };     // 지그재그1 
+    wall[22] = { -WorldX + 900, WorldY - 550, 100.0f, 30.0f, BLACK };      // 지그재그2
+    wall[23] = { -WorldX + 1100, WorldY - 600, 100.0f, 30.0f, BLACK };     // 지그재그3
+    wall[24] = { -WorldX + 900, WorldY - 650, 100.0f, 30.0f, BLACK };      // 지그재그4
+    wall[25] = { -WorldX + 1100, WorldY - 700, 100.0f, 30.0f, BLACK };     // 지그재그5 
+    wall[26] = { -WorldX + 900, WorldY - 750, 100.0f, 30.0f, BLACK };      // 지그재그6
 
 
+    // 가로등 1
+    wall[27] = { -WorldX + 700, WorldY - 350, 30.0f, 200.0f, BLACK };     // 세로 기둥
+    wall[28] = { -WorldX + 700, WorldY - 380, 100.0f, 30.0f, BLACK };     // 가로 기둥
 
+    // 가로등 2
+    wall[29] = { -WorldX + 1300, WorldY - 450, 30.0f, 400.0f, BLACK };     // 세로 기둥
+    wall[30] = { -WorldX + 1280, WorldY - 450, 70.0f, 30.0f, BLACK };      // 가로 기둥
+
+    // 가로등 3
+    wall[31] = { -WorldX + 1600, WorldY - 450, 30.0f, 400.0f, BLACK };     // 세로 기둥
+    wall[32] = { -WorldX + 1580, WorldY - 450, 70.0f, 30.0f, BLACK };      // 가로 기둥
+
+    // 가로등 4
+    wall[33] = { -WorldX + 1900, WorldY - 450, 30.0f, 400.0f, BLACK };     // 세로 기둥
+    wall[34] = { -WorldX + 1880, WorldY - 450, 70.0f, 30.0f, BLACK };      // 가로 기둥
+
+    // 가로등 5
+    wall[35] = { -WorldX + 2200, WorldY - 450, 30.0f, 400.0f, BLACK };     // 세로 기둥
+    wall[36] = { -WorldX + 2180, WorldY - 450, 70.0f, 30.0f, BLACK };      // 가로 기둥
+
+    // 가로등 6
+    wall[37] = { -WorldX + 2500, WorldY - 450, 30.0f, 400.0f, BLACK };     // 세로 기둥
+    wall[38] = { -WorldX + 2480, WorldY - 450, 70.0f, 30.0f, BLACK };      // 가로 기둥
 
     wallArr = wall;
     outCount = wallcount;
@@ -71,7 +105,7 @@ void Puzzle::Create_Puzzle(float WorldX, float WorldY, const PUZZLE*& puzzleArr,
     // ******* 장애물 추가하는 곳 *******
     // [예시]
     puzzle[0] = { -WorldX, -WorldY, 200.0f, WorldY * 2, BLACK };
-    
+
 
     puzzleArr = puzzle;
     outCount = puzzlecount;
