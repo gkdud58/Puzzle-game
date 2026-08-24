@@ -12,12 +12,12 @@ const float WorldY = 1300.0f;     // 월드 기준 바닥의 y좌표 (고정)
 Player::Player()
 {
 	// -WorldX + 1100, -WorldY + 1300
-	position = { 100, -1000 };
+	position = { 100, -500};
 
 	speed = 500.0f;
 
-	width = 100.0f;
-	height = 120.0f;
+	width = 80.0f;
+	height = 100.0f;
 
 	velocityY = 0;
 

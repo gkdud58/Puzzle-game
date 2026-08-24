@@ -51,8 +51,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-08-24T13:02:16.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Puzzle game\\player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-08-24T13:02:16.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T13:02:16.528Z"
             },
             {
               "$type": "Document",
@@ -91,7 +89,7 @@
               "RelativeDocumentMoniker": "Puzzle game\\player.cpp",
               "ToolTip": "C:\\puzzle\\Puzzle-game\\Puzzle game\\Puzzle game\\player.cpp",
               "RelativeToolTip": "Puzzle game\\player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-08-24T13:02:16.578Z",
               "EditorCaption": ""
@@ -130,8 +128,7 @@
               "RelativeToolTip": "Puzzle game\\Player_Camera.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-08-24T13:02:16.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T13:02:16.635Z"
             }
           ]
         }
